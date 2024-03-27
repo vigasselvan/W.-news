@@ -180,3 +180,64 @@
 .det h2:hover{
     color: hsl(5, 85%, 63%);
 }
+
+.mobNavbar{
+    display: none;
+}
+.mobSidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: hsl(233, 8%, 79%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .mobSidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: hsl(240, 100%, 5%);
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .mobSidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .mobSidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
+@media screen and (max-width: 500px) {
+    .mobNavbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        margin: 10px;
+    }
+    .navbar{
+        display: none;
+    }
+    .homeNewsdetails{
+        flex-direction: column;
+    }
+    .mainContent{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .newsArt{
+        flex-direction: column;
+    }
+  }

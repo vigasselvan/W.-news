@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.svg">
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="script.js"></script> 
   <title>W. News Homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,10 +28,29 @@
     </ul>
   </nav>
 
+  <div class="mobNavbar">
+    <img src="./assets/images/logo.svg">
+    <h1 style="cursor: pointer;"><a onclick="expandNav()">☰</a></h1>
+  </div>
+
+  <div id="mobSidebar" class="mobSidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="/">Home</a>
+      <a href="/">News</a>
+      <a href="/">Popular</a>
+      <a href="/">Trending</a>
+      <a href="/">Categories</a>
+  </div>  
+
+
   <div class="mainContent"> 
     <div class="homeNews">
       <div class="homeNewsImg">
-        <img src="./assets/images/image-web-3-desktop.jpg">
+        <picture>
+          <source media="(max-width: 500px)" srcset="./assets/images/image-web-3-mobile.jpg">
+          <source media="(min-width: 500px)" srcset="./assets/images/image-web-3-desktop.jpg">
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="Home News image">
+        </picture>
       </div>
       <div class="homeNewsdetails">
         <div class="homeNewsTitle">
@@ -93,5 +113,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://vigas.me/Personal_website/">Vigas</a>.
   </div>
+
 </body>
 </html>
